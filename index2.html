@@ -1,0 +1,31 @@
+<!-- WAP to implement jQuery” -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <p>Hello Everyone</p>
+    <p>How are you ?</p>
+
+    <button id="hidBtn">Hide Text</button>
+    <button id="showBtn">Show Text</button>
+    <script>
+      $(document).ready(function () {
+        $("#hidBtn").click(function () {
+          $("p").hide();
+        });
+      });
+      $(document).ready(function () {
+        $("#showBtn").click(function () {
+          $("p").show();
+        });
+      });
+    </script>
+  </body>
+</html>
