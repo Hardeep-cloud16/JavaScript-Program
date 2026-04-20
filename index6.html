@@ -1,0 +1,28 @@
+<!-- WAP Using Document.getElementByTagName(tagName) -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>Paragraph 1</p>
+    <p>Paragraph 2</p>
+    <p>Paragraph 3</p>
+
+    <button id="btn">Change All Paragraph</button>
+
+    <script>
+      let paragraph = document.getElementsByTagName("p");
+      let button = document.getElementById("btn");
+
+      button.onclick = () => {
+        for (let i = 0; i < paragraph.length; i++) {
+          paragraph[i].textContent = `Updated Paragraph ${i + 1}`;
+        }
+      };
+    </script>
+  </body>
+</html>
