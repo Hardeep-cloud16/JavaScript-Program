@@ -1,0 +1,24 @@
+<!-- WAP  of event listener  in javascript HTMl basic structur  -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>JavaScript Event Listener Example</h1>
+
+    <button id="btn">Change Background Colo</button>
+
+    <script>
+      let Button = document.getElementById("btn");
+
+      Button.addEventListener("click", () => {
+        document.body.style.backgroundColor = "red";
+        s;
+      });
+    </script>
+  </body>
+</html>
