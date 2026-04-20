@@ -1,0 +1,27 @@
+<!-- WAP to Change ALl Paragraph using DOM -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p class="para">This First Paragraph</p>
+    <p class="para">This Second Paragraph</p>
+    <p class="para">his Third Paragraph</p>
+
+    <button id="btn">Change All Paragraph</button>
+
+    <script>
+      let paragraph = document.getElementsByClassName("para");
+      let Button = document.getElementById("btn");
+
+      Button.onclick = () => {
+        for (let i = 0; i < paragraph.length; i++) {
+          paragraph[i].textContent = `The ${i + 1} Paragraph is Updated`;
+        }
+      };
+    </script>
+  </body>
+</html>
