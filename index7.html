@@ -1,0 +1,36 @@
+<!-- WAP To Handling a NodeList Using getElementsByTagName() -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Title 1</h2>
+    <p>This is the first paragraph</p>
+
+    <h2>Title 2</h2>
+    <p>This is the second paragraph</p>
+
+    <h2>Title 3</h2>
+    <p>This is the third paragraph</p>
+
+    <h2>Title 4</h2>
+    <p>This is the fourth paragraph</p>
+
+    <button id="btn">Change All Title</button>
+
+    <script>
+      let heading2 = document.getElementsByTagName("h2");
+      let button = document.getElementById("btn");
+
+      button.onclick = () => {
+        for (let i = 0; i < heading2.length; i++) {
+          heading2[i].textContent = `Updated Title ${i + 1}`;
+        }
+      };
+    </script>
+  </body>
+</html>
