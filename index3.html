@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BOM Example</title>
+  </head>
+  <body>
+    <h1>BOM Navigation and Location Example</h1>
+
+    <button onclick="goBack()">Go Back</button>
+    <button onclick="goForward()">Go Forward</button>
+    <button onclick="reloadPage()">Reload Page</button>
+    <button onclick="goToUrl()">Go To Google</button>
+
+    <h2>Current Location</h2>
+    <p id="currentLocation"></p>
+
+    <script>
+      function goBack() {
+        window.history.back();
+      }
+
+      function goForward() {
+        window.history.forward();
+      }
+
+      function reloadPage() {
+        location.reload();
+      }
+
+      function goToUrl() {
+        location.href = "https://www.google.com";
+      }
+
+      document.getElementById("currentLocation").textContent = location.href;
+    </script>
+  </body>
+</html>
