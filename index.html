@@ -1,0 +1,29 @@
+<!-- WAP to create multiple object using by constructor function -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function student(name, age) {
+        this.name = name;
+        this.age = age;
+
+        this.displayInfo = function () {
+          document.write(`Your Name is : ${this.name} <br>`);
+          document.write(`Your Age is : ${this.age} <br><br>`);
+        };
+      }
+
+      var student1 = new student("Ankit", 23);
+      var student2 = new student("pulkit", 33);
+
+      student1.displayInfo();
+      student2.displayInfo();
+    </script>
+  </body>
+</html>
