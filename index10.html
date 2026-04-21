@@ -1,0 +1,28 @@
+<!-- WAP of Inheritance Using Prototype Chain in JavaScript -->
+
+<!doctype html>
+<html>
+  <head>
+    <title>Prototype Chain</title>
+  </head>
+  <body>
+    <script>
+      function Animal() {
+        this.name = "DOG";
+      }
+
+      Animal.prototype.sound = function () {
+        document.write("Barks");
+      };
+
+      function Pet() {}
+
+      Pet.prototype = new Animal();
+
+      let obj = new Pet();
+
+      document.write(obj.name + "<br>");
+      obj.sound();
+    </script>
+  </body>
+</html>
