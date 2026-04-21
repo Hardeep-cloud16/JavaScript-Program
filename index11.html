@@ -1,0 +1,27 @@
+  <!-- WAP of Prototype in JavaScript -->
+  <!doctype html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+    </head>
+    <body>
+      <script>
+        function Person(name, age) {
+          this.name = name;
+          this.age = age;
+        }
+
+        Person.prototype.greet = function () {
+          document.write(`Hello ${this.name} , WellCome to the Resort.<br>`);
+          document.write(`${this.name} , your age is : ${this.age} <br><br>`);
+        };
+        let person1 = new Person("Hardeep Singh", 20);
+        let person2 = new Person("Bhavuk", 20);
+
+        person1.greet();
+        person2.greet();
+      </script>
+    </body>
+  </html>
